@@ -1,0 +1,145 @@
+{
+  "info": {
+    "_postman_id": "693be07b-b4ef-4b68-b3e7-911e50ad41a4",
+    "name": "Cars crud app",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "14413170"
+  },
+  "item": [
+    {
+      "name": "create new car with fuel details",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"brand\":\"MARUTI\",\r\n    \"model\":\"800\",\r\n    \"year\":2000,\r\n    \"price\": 700000,\r\n    \"carFuelDto\":{\r\n        \"fuelCapacity\": 35,\r\n        \"fuelType\": \"PETROL\",\r\n        \"transmissionType\": \"MT\"\r\n    }\r\n\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/rest/cars",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "rest",
+            "cars"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get car with fuel details by id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/rest/cars/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "rest",
+            "cars",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get all cars with fuel details",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/rest/cars?page=0&size=10&searchString=",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "rest",
+            "cars"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "0"
+            },
+            {
+              "key": "size",
+              "value": "10"
+            },
+            {
+              "key": "searchString",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update car with fuel details Copy",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\": 1,\r\n    \"brand\": \"MARUTI\",\r\n    \"model\": \"800\",\r\n    \"year\": 2000,\r\n    \"price\": 700000,\r\n    \"carFuelDto\": {\r\n        \"id\": 1,\r\n        \"fuelCapacity\": 20,\r\n        \"fuelType\": \"PETROL\",\r\n        \"transmissionType\": \"MT\"\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/rest/cars/15",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "rest",
+            "cars",
+            "15"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete car details",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/rest/cars/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "rest",
+            "cars",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
