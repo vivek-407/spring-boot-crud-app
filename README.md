@@ -47,7 +47,7 @@ mvn test
 
 ## 📩 Postman Collection
 
-Click the button below to import the Postman collection:
+https://github.com/vivek-407/spring-boot-crud-app/blob/main/PostmanCollection.json
 
 
 
